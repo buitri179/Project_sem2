@@ -40,6 +40,6 @@ route::get('/delete_gallary/{id}',[AdminController::class,'delete_gallary']);
 
 route::get('/hotel_gallary',[HomeController::class,'hotel_gallary']);
 
-//route::get('our_rooms',[HomeController::class,'our_rooms']);
+route::get('/our_rooms',[HomeController::class,'search_rooms']);
 
 route::get('/our_rooms',[HomeController::class,'our_rooms']);

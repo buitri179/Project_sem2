@@ -64,14 +64,13 @@ class HomeController extends Controller
 
     }
 
-//    public function our_rooms()
-//    {
-//        $room = Room::all();
-//        return view('home.our_rooms',compact('room'));
-//
-//    }
+    public  function our_rooms()
+    {
+        $room = Room::all();
+        return view('home.our_rooms',compact('room'));
+    }
 
-    public function our_rooms(Request $request)
+    public function search_rooms(Request $request)
     {
         $start_date = Carbon::parse($request->startDate)->format('Y-m-d');
         $end_date = Carbon::parse($request->endDate)->format('Y-m-d');
