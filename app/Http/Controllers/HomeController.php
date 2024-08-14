@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Gallary;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\Room;
 use App\Models\Booking;
@@ -63,11 +64,30 @@ class HomeController extends Controller
 
     }
 
-    public function our_rooms()
-    {
-        $room = Room::all();
-        return view('home.our_rooms',compact('room'));
+//    public function our_rooms()
+//    {
+//        $room = Room::all();
+//        return view('home.our_rooms',compact('room'));
+//
+//    }
 
+    public function our_rooms(Request $request)
+    {
+        $start_date = Carbon::parse($request->startDate)->format('Y-m-d');
+        $end_date = Carbon::parse($request->endDate)->format('Y-m-d');
+        $adults = $request->adults;
+        $children = $request->children;
+
+        $room = Room::where('capacity_adults', '>=', $adults)
+            ->where('capacity_children', '>=', $children)
+            ->whereDoesntHave('bookings', function ($query) use ($start_date, $end_date) {
+                $query->where(function ($q) use ($start_date, $end_date) {
+                    $q->where('start_date', '<=', $end_date)
+                        ->where('end_date', '>=', $start_date);
+                });
+            })
+            ->get();
+        return view('home.our_rooms', ['room' => $room]);
     }
 
     public function hotel_gallary()
@@ -75,4 +95,5 @@ class HomeController extends Controller
         $gallary = Gallary::all();
         return view('home.hotel_gallary',compact('gallary'));
     }
+
 }

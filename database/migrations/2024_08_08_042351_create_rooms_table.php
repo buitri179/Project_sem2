@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('price')->nullable();
             $table->string('wifi')->default('yes');
             $table->string('room_type')->nullable();
-            $table->timestamps();
+            $table->integer('capacity_adults')->nullable();
+            $table->integer('capacity_children')->nullable();
+            $table->timestamps('');
         });
     }
 

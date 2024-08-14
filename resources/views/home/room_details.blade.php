@@ -117,6 +117,16 @@
                 </div>
 
                 <div>
+                    <lab>Adults</lab>
+                    <input type="number" name="adults">
+                </div>
+
+                <div>
+                    <lab>Children</lab>
+                    <input type="children" name="children">
+                </div>
+
+                    <div>
                     <label>Start Date</label>
                     <input type="date" name="startDate" id="startDate">
                 </div>

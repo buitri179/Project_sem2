@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     @include('home.css')
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        #endDate,#startDate
-        {
+        #endDate, #startDate {
             color: white;
         }
     </style>
@@ -25,24 +25,24 @@
 <!-- end header inner -->
 <!-- end header -->
 <!-- banner -->
-    @include('home.slider')
+@include('home.slider')
 <!-- end banner -->
 <!-- about -->
-    @include('home.about')
+@include('home.about')
 <!-- end about -->
 <!-- our_room -->
-    @include('home.room')
+@include('home.rooms')
 <!-- end our_room -->
 <!-- gallery -->
-    @include('home.galary')
+@include('home.galary')
 <!-- end gallery -->
 <!-- blog -->
 
 <!-- end blog -->
 <!--  contact -->
-    @include('home.contact')
+@include('home.contact')
 <!-- end contact -->
 <!--  footer -->
-    @include('home.footer')
+@include('home.footer')
 </body>
 </html>

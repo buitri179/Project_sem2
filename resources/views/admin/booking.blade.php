@@ -63,6 +63,8 @@
                                 <th class="th_deg">Customer name</th>
                                 <th class="th_deg">Email</th>
                                 <th class="th_deg">Phone</th>
+                                <th class="th_deg">adults</th>
+                                <th class="th_deg">children</th>
                                 <th class="th_deg">Arrival Type</th>
                                 <th class="th_deg">Leaving Date</th>
                                 <th class="th_deg">Status</th>
@@ -79,6 +81,8 @@
                                     <td>{{$data->name}}</td>
                                     <td>{{$data->email}}</td>
                                     <td>{{$data->phone}}</td>
+                                    <td>{{$data->adutls}}</td>
+                                    <td>{{$data->children}}</td>
                                     <td>{{$data->start_date}}</td>
                                     <td>{{$data->end_date}}</td>
                                     <td>

@@ -14,14 +14,16 @@ class Booking extends Model
         'name',
         'email',
         'phone',
+        'adults',
+        'children',
         'start_date',
-        'end_date'
+        'end_date',
+
     ];
 
     public function room()
     {
-
-        return $this->hasOne('App\Models\Room','id','room_id');
+        return $this->belongsTo(Room::class);
     }
 
 }

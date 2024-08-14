@@ -15,6 +15,15 @@ class Room extends Model
         'description',
         'price',
         'wifi',
-        'room_type'
+        'room_type',
+        'capacity_adults',
+        'capacity_children',
+
     ];
+
+    // Quan hệ với bảng bookings
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
 }

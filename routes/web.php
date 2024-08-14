@@ -38,6 +38,8 @@ route::post('/upload_gallary',[AdminController::class,'upload_gallary']);
 
 route::get('/delete_gallary/{id}',[AdminController::class,'delete_gallary']);
 
-route::get('/our_rooms',[HomeController::class,'our_rooms']);
-
 route::get('/hotel_gallary',[HomeController::class,'hotel_gallary']);
+
+//route::get('our_rooms',[HomeController::class,'our_rooms']);
+
+route::get('/our_rooms',[HomeController::class,'our_rooms']);

@@ -64,6 +64,8 @@
                                 <th class="th_deg">Price</th>
                                 <th class="th_deg">Wifi</th>
                                 <th class="th_deg">Room Type</th>
+                                <th class="th_deg">capacity_adults</th>
+                                <th class="th_deg">capacity_children</th>
                                 <th class="th_deg">Image</th>
                                 <th class="th_deg">Delete</th>
                                 <th class="th_deg">Update</th>
@@ -76,6 +78,8 @@
                                 <td>{{$data->price}}</td>
                                 <td>{{$data->wifi}}</td>
                                 <td>{{$data->room_type}}</td>
+                                <td>{{$data->capacity_adults}}</td>
+                                <td>{{$data->capacity_children}}</td>
                                 <td>
                                     <img width="60px" src="room/{{$data->image}}">
                                 </td>

@@ -19,7 +19,7 @@
 <!-- end header -->
 <!-- banner -->
 <!-- our_room -->
-@include('home.room')
+@include('home.rooms')
 <!-- end our_room -->
 <!--  footer -->
 @include('home.footer')
